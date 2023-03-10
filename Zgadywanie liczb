@@ -1,0 +1,31 @@
+from random import randint
+zm=int(input("Z POŚRÓD ILU LICZB CHCESZ ZGADYWAĆ? "))
+zag = randint(0,zm)
+for i in range(50):
+    odp=-1
+    i=0
+    print("ZGADNIJ WYLOSOWANĄ LICZBĘ Z ZADANEGO PRZEDZIAŁU, OD 0 DO",zm)
+    while odp!=zag:
+        i+=1
+        odp = int(input("Podaj liczbę: "))
+        if odp<0 or odp>zm:
+            print("LICZBA NIE ZNAJDUJE SIĘ W PRZEDZIALE!")
+            
+        else:
+            if odp<zag:
+                print("WYLOSOWANA LICZBA JEST WIEKSZA OD TWOJEJ!")
+                print("LICZBA PRÓB:",i,"\n")
+            elif odp>zag:
+                print("WYLOSOWANA LICZBA JEST MNIEJSZA OD TWOJEJ!")
+                print("LICZBA PRÓB:",i,"\n")
+    print("BRAWO, ODGADŁEŚ LICZBĘ ZA",i,"RAZEM!")
+    dec=input("CZY CHCESZ WYJŚĆ Z GRY? T/N ")
+    if dec=="T" or dec=="t":
+        print("CHCESZ WYJŚĆ Z GRY!\n")
+        break
+    elif dec=="N" or dec=="n":
+        print("CHCESZ ZOSTAĆ W GRZE!")
+        zm=int(input("Z POŚRÓD ILU LICZB CHCESZ ZGADYWAĆ? "))
+    else:
+        print("NIEROZPONANA DECYZJA - WYJŚCIE Z GRY!\n")
+        break
