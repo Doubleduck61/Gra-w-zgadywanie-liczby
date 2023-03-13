@@ -1,0 +1,15 @@
+print("[6] SPRAWDZANIE POPRAWNOŚCI NUMERU TELEFONU\n")
+print("PODAJ NUMER TELEFONU KOMÓRKOEGO BĄDŹ STACJONARNEGO.")
+print("PODANE NUMERY NIE POWINNY ZAWIERAĆ SPACJI!")
+print("NP: 510111990 albo 134323409\n")
+print("WPROWADŹ NUMER")
+nrTel=input()
+dlugosc=len(nrTel)
+poprawnosc=nrTel.isdigit()
+poprawnosc1=nrTel.isalpha()
+if (dlugosc==9 and poprawnosc==True) or (dlugosc==11 and poprawnosc==False and poprawnosc1==False):
+    print("NUMER TELEFONU JEST POPRAWNY!")
+    yy=input("KLIKNIJ DOWOLNY PRZYCISK ABY KONTYNUOWAĆ...\n")
+else:
+    print("NUMER TELEFONU NIE JEST POPRAWNY!")
+ 
